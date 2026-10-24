@@ -15,6 +15,10 @@ Show **just the game you're playing** on your Discord profile, with no "GeForce 
 - Up to **2 profile buttons** with your own links (your server, Twitch, YouTube...)
 - **Auto-clear**: your game disappears when you quit the game or close GeForce NOW
 - **Status text**: change the Details and State lines on the fly, without picking the game again
+- **Presets**: save a game with its Details and State and bring it back in one click
+- **Saved fixes list**: see and remove the corrections auto-detect remembers
+- **Pause**: hide your game from Discord in one click, and bring it back when you want
+- **Notifications**: an optional Windows alert when your game switches or is cleared
 - **Runs in the tray** and can **start with Windows**, so it's always ready
 - **Update notice** when a new version is released
 
@@ -86,14 +90,45 @@ Use the **Status text** card to add or change the two lines under the game name,
 
 ### Auto-clear
 
-With **Auto-clear** on, your game is removed about 30 seconds after you quit it or close GeForce NOW, so you never show a game you've quit.
+With **Auto-clear** on, your game is removed a few seconds after you quit it or close GeForce NOW, so you never show a game you've quit.
 
 It tells that you've left the game by watching the GeForce NOW window. If it isn't clearing for you, open **Debug info** in the app, click **Copy debug info**, and include it in your bug report.
+
+### Presets
+
+Presets save a game together with its **Details** and **State**, so you can switch back to a setup in one click.
+
+1. Pick a game (or have one showing) and fill in **Details** and **State** if you want.
+2. In the **Presets** card, optionally type a name and click **Save as preset**.
+3. Click **Use** on any preset to show it. Click **×** to delete it.
+
+A preset saved without a game only changes the status text of whatever game is showing. You can save up to 20. Using a preset turns auto-detect off, like picking a game by hand.
+
+### Saved fixes
+
+When you correct a wrong auto-detected game, the app remembers that window title. The **Saved fixes** card (it appears once you have one) lists them. Click **×** to forget a fix and let auto-detect guess again.
+
+### Pause
+
+Click **Pause** at the top of the app (or **Pause presence** in the tray menu) to hide your game from Discord without losing it. Auto-detect keeps tracking, and your status text stays saved. Click **Resume** and your current game shows again.
+
+Pause is for the current session only. If you quit and reopen the app, it starts un-paused.
+
+### Notifications
+
+With **Notify on game change** on, you get a Windows notification when:
+
+- auto-detect switches to a new game (so you can spot a wrong guess), or
+- your game is cleared because you quit it.
+
+Click the notification to open the app and fix it. Switch it off in the **Behavior** card or in the tray menu. Changes you make yourself in the app don't send a notification.
+
+If you never see them, check that Windows notifications are on for Game Presence (**Settings → System → Notifications**) and that Focus assist / Do not disturb is off.
 
 ### Tray and start with Windows
 
 - Closing the window **keeps the app running in the tray** (bottom-right of your taskbar), so your presence stays up.
-- **Right-click the tray icon** to open the app, **turn **Start with Windows** on or off, check for updates, or **Quit**.
+- **Right-click the tray icon** to open the app, **pause** your presence, turn notifications or **Start with Windows** on or off, check for updates, or **Quit**.
 - **Start with Windows** launches the app hidden in the tray when you sign in. You can also switch it on in the **App** card.
 
 ### Updates
@@ -118,6 +153,7 @@ The app checks for new versions on its own. When one is out, an **Update availab
 | "GeForce NOW" still shows next to my game | Turn off Discord integration in the GeForce NOW settings if it has that option, or hide it in Discord under **Settings → Activity Privacy**. |
 | Auto-detect shows nothing | The GeForce NOW window title doesn't include the game name. Pick the game manually. |
 | My game stays up after I quit it | Check the **GeForce NOW:** line at the top of the app. If it says "open, no game running" while you're in a game, the app can't tell when you leave. Click **Copy debug info** and report it. You can always press **Clear**. |
+| I don't get game-change notifications | Make sure **Notify on game change** is on, then check Windows **Settings → System → Notifications** and turn off Focus assist / Do not disturb. |
 | "Couldn't check for updates" | You may be offline, or no release exists yet. Try again later. |
 | Windows or antivirus flags the installer | The installer is unsigned. See the SmartScreen steps above. |
 
