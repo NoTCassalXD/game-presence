@@ -15,7 +15,9 @@ Show **just the game you're playing** on your Discord profile, with no "GeForce 
 - Up to **2 profile buttons** with your own links (your server, Twitch, YouTube...)
 - **Auto-clear**: your game disappears when you quit the game or close GeForce NOW
 - **Status text**: change the Details and State lines on the fly, without picking the game again
-- **Presets**: save a game with its Details and State and bring it back in one click
+- **Party size**: show "(2 of 4)" next to your State line, with an on/off switch
+- **Languages**: English, Hindi, Spanish, Portuguese, French and German
+- **Saved statuses**: keep up to 5 Details/State combos and switch between them in one click
 - **Saved fixes list**: see and remove the corrections auto-detect remembers
 - **Pause**: hide your game from Discord in one click, and bring it back when you want
 - **Notifications**: an optional Windows alert when your game switches or is cleared
@@ -94,15 +96,21 @@ With **Auto-clear** on, your game is removed a few seconds after you quit it or 
 
 It tells that you've left the game by watching the GeForce NOW window. If it isn't clearing for you, open **Debug info** in the app, click **Copy debug info**, and include it in your bug report.
 
-### Presets
+### Saved statuses
 
-Presets save a game together with its **Details** and **State**, so you can switch back to a setup in one click.
+In the **Status text** card, type your Details and State and click **Save this status**. You can keep up to 5. Click **Use** on a saved status to put it on whatever game is showing, or **×** to delete it.
 
-1. Pick a game (or have one showing) and fill in **Details** and **State** if you want.
-2. In the **Presets** card, optionally type a name and click **Save as preset**.
-3. Click **Use** on any preset to show it. Click **×** to delete it.
+### Party size
 
-A preset saved without a game only changes the status text of whatever game is showing. You can save up to 20. Using a preset turns auto-detect off, like picking a game by hand.
+In the **Status text** card, type how many people are in your party and the max (for example **2** and **4**), then click **Update status**. Discord shows it as **(2 of 4)** next to your State line.
+
+- Use the **Show party size** switch to hide it without losing your numbers. Switch it back on and it returns.
+- Clear both boxes and click **Update status** to remove it.
+- Both numbers are needed, from 1 to 99, and the first can't be bigger than the max.
+
+### Language
+
+Pick your language in the **App** card. The app starts in your Windows language when it's supported, otherwise English. Error messages from the app's engine and the tray menu stay in English.
 
 ### Saved fixes
 
