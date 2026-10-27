@@ -15,6 +15,15 @@ Show **just the game you're playing** on your Discord profile, with no "GeForce 
 - Up to **2 profile buttons** with your own links (your server, Twitch, YouTube...)
 - **Auto-clear**: your game disappears when you quit the game or close GeForce NOW
 - **Status text**: change the Details and State lines on the fly, without picking the game again
+- **Preview**: see roughly how your activity looks to others
+- **Friend-safe mode**: hide Details, State, party and buttons with one switch
+- **Pause when away**: your game hides itself when you're idle and returns when you're back
+- **Status per game**: each game can remember its own Details and State
+- **Recent games**: your last 5 games as one-click chips under Search
+- **Game icons** next to game names (loaded from Discord)
+- **Connection help**: a short checklist appears when the app can't reach Discord
+- **Reset everything**: clear all saved data in one click
+- **Custom games**: add a game that isn't in Discord's list
 - **Party size**: show "(2 of 4)" next to your State line, with an on/off switch
 - **Languages**: English, Hindi, Spanish, Portuguese, French and German
 - **Saved statuses**: keep up to 5 Details/State combos and switch between them in one click
@@ -100,13 +109,52 @@ It tells that you've left the game by watching the GeForce NOW window. If it isn
 
 In the **Status text** card, type your Details and State and click **Save this status**. You can keep up to 5. Click **Use** on a saved status to put it on whatever game is showing, or **×** to delete it.
 
+### Preview
+
+The **Preview** card shows roughly what other people see: the game, your Details and State, the party size, the timer and your button names. It follows Pause and Friend-safe mode. It's an approximation, since Discord decides the final look, and you can't see your own buttons on Discord itself.
+
+### Friend-safe mode
+
+Switch on **Friend-safe mode** (under the Preview, or in the tray menu) to hide Details, State, party size and profile buttons. Only the game name and the timer stay. Switch it off and everything comes back. Nothing is deleted.
+
+### Status per game
+
+Type a Details and State, then click **Remember for this game**. From then on, that game starts with its own text, whether you pick it by hand with empty boxes or auto-detect finds it. Remembered games are listed under **Saved per game**, where you can remove them. Text you typed by hand is never copied onto a game that has its own saved status, and one game's saved status is never copied onto another. Switch **Auto-fill status per game** off in the **Behavior** card to ignore saved statuses.
+
+### Pause when away
+
+In the **Behavior** card, turn on **Pause when away** and choose 5, 10, 15 or 30 minutes. If you stop using the keyboard and mouse for that long, your game is hidden from Discord. Move the mouse or press a key and it returns. If you paused yourself, it stays paused until you resume.
+
+It only counts keyboard and mouse. **Controller input may not count**, so if you play with a controller, leave this off or choose a longer time. It's off by default.
+
+### Recent games
+
+Your last 5 games show as chips under **Search**. Click one to select it, then click **Set game**.
+
+### Reset everything
+
+In the **App** card, click **Reset**, then click again within 4 seconds to confirm. It clears your saved fixes, statuses, custom games, recent games, buttons and settings, and removes the game from Discord. Your language and the Start with Windows choice stay.
+
+### Custom games
+
+If a game isn't in the search, you can add it yourself. Discord shows the name of the application, so you create one with the game's name:
+
+1. Open the **[Discord Developer Portal](https://discord.com/developers/applications)** and sign in.
+2. Click **New Application** and type the game's exact name. This is the name people will see.
+3. On the **General Information** page, copy the **Application ID**.
+4. In Game Presence, open **Custom games**, type the name, paste the ID, and click **Add game**.
+5. Click **Use** next to it, then **Set game**.
+
+It's saved on your PC, and you can add up to 25. If Discord can't connect, check that the ID was copied fully and that the Discord desktop app is open.
+
 ### Party size
 
 In the **Status text** card, type how many people are in your party and the max (for example **2** and **4**), then click **Update status**. Discord shows it as **(2 of 4)** next to your State line.
 
+- When someone joins or leaves, click the **+** or **−** buttons next to the numbers. Discord updates right away, no need to click **Update status**.
 - Use the **Show party size** switch to hide it without losing your numbers. Switch it back on and it returns.
 - Clear both boxes and click **Update status** to remove it.
-- Both numbers are needed, from 1 to 99, and the first can't be bigger than the max.
+- The numbers save as soon as you type them and click away from the box, with no need to click **Update status**. Both numbers are needed, from 1 to 99, and the first can't be bigger than the max.
 
 ### Language
 
@@ -143,7 +191,13 @@ If you never see them, check that Windows notifications are on for Game Presence
 
 The app checks for new versions on its own. When one is out, an **Update available** banner appears at the top with a **Download** button. You can also click **Check for updates** in the **App** card. To update, download the new installer and run it. It replaces the old version and keeps your settings.
 
+## Window size
+
+The app uses a single column in a small window and switches to two columns when the window is wide, such as full screen.
+
 ## Good to know
+
+- Game Presence shows your live "Playing" status. It does not add games to Discord's "Recent activity" history, because Discord only records games it sees running on your PC, and GeForce NOW games run on NVIDIA's servers.
 
 - Closing the window **hides the app to the tray** and keeps your presence up. To fully exit, right-click the tray icon and choose **Quit**. Your presence disappears when the app quits.
 - Your saved fixes and settings are stored on your PC only. Nothing is sent anywhere except to Discord's local app and Discord's public game list.
