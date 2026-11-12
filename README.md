@@ -1,5 +1,7 @@
 # Game Presence
 
+![Game Presence](game-presence-banner-detailed.png)
+
 Show **just the game you're playing** on your Discord profile, with no "GeForce NOW" in the name. If it ever shows the wrong game, fix it in two clicks.
 
 > Not affiliated with, endorsed by, or sponsored by Discord or NVIDIA.
@@ -22,13 +24,21 @@ Show **just the game you're playing** on your Discord profile, with no "GeForce 
 - **Recent games**: your last 5 games as one-click chips under Search
 - **Game icons** next to game names (loaded from Discord)
 - **Connection help**: a short checklist appears when the app can't reach Discord
+- **Discord disconnect alert**: if Discord closes, you get a warning and the app reconnects by itself
 - **Reset everything**: clear all saved data in one click
 - **Custom games**: add a game that isn't in Discord's list
 - **Party size**: show "(2 of 4)" next to your State line, with an on/off switch
 - **Languages**: English, Hindi, Spanish, Portuguese, French and German
 - **Saved statuses**: keep up to 5 Details/State combos and switch between them in one click
 - **Saved fixes list**: see and remove the corrections auto-detect remembers
-- **Pause**: hide your game from Discord in one click, and bring it back when you want
+- **Pause**: hide your game from Discord in one click, or with **Ctrl+Alt+P** from anywhere
+- **Private games**: hide a game from Discord while the other games keep showing
+- **Theme**: dark, light, or match Windows
+- **Wallpaper**: set your own background, with colours that match the app
+- **Low PC mode**: a lighter interface for slow PCs, switched on automatically or by hand
+- **Reduce motion**: turn off animations
+- **Export and import**: back up your settings to a file and restore them later
+- **Save crash report**: send a report with your username removed, to help fix bugs
 - **Notifications**: an optional Windows alert when your game switches or is cleared
 - **Runs in the tray** and can **start with Windows**, so it's always ready
 - **Update notice** when a new version is released
@@ -156,6 +166,53 @@ In the **Status text** card, type how many people are in your party and the max 
 - Clear both boxes and click **Update status** to remove it.
 - The numbers save as soon as you type them and click away from the box, with no need to click **Update status**. Both numbers are needed, from 1 to 99, and the first can't be bigger than the max.
 
+### Private games
+
+Some games you don't want on your profile. In the **Private games** card, search for the game and add it. Games you add there are never shown on Discord, and the app keeps running so your other games still show. Remove a game from the list to show it again.
+
+### Pause
+
+Click **Pause** at the top of the app, press **Ctrl+Alt+P** from anywhere, or choose **Pause presence** in the tray menu to hide your game from Discord without losing it. Auto-detect keeps tracking, and your status text stays saved. Press the same again to resume, and your current game shows again.
+
+Pause is for the current session only. If you quit and reopen the app, it starts un-paused.
+
+To turn off the Ctrl+Alt+P shortcut, switch off **Pause shortcut** in the **App** card. It's on by default.
+
+### Theme and wallpaper
+
+In the **Look** card:
+
+- **Theme**: choose dark, light, or **system** to match Windows.
+- **Wallpaper**: click **Choose wallpaper** to pick an image (PNG, JPEG or WebP, up to 4 MB). Use the **Blur** and **Dim** sliders to adjust it, or **Remove** to go back to plain.
+- **Match colours to wallpaper**: the app takes its colours from the picture. Switch this off to keep the app's own colours with a wallpaper.
+- **Reduce motion**: turns off animations.
+
+### Low PC mode
+
+If the app feels slow, set **Low PC mode** in the **Look** card:
+
+- **Auto** (default): turns on for PCs with 4 or fewer cores or 8 GB of RAM or less.
+- **On** or **Off**: choose it yourself.
+
+It removes blur and animations so the app runs lighter. Your presence works the same either way.
+
+### Discord disconnect
+
+If Discord closes or restarts, the app shows a **Discord connection lost** message and tries to reconnect every 15 seconds. When it's back, your game is set again and you get a **Presence restored** message. You don't need to click anything.
+
+### Export and import
+
+In the **App** card, under **Backup**:
+
+- **Export** saves your settings to a file.
+- **Import** loads a settings file, and checks each value before it applies.
+
+The wallpaper image isn't part of the export. Add it again on the new PC.
+
+### Save a crash report
+
+If the app crashes or misbehaves, open the **App** card and click **Save report**. It saves a text file with your version, PC details and recent errors, with your Windows username removed. Attach it to a bug report.
+
 ### Language
 
 Pick your language in the **App** card. The app starts in your Windows language when it's supported, otherwise English. Error messages from the app's engine and the tray menu stay in English.
@@ -163,12 +220,6 @@ Pick your language in the **App** card. The app starts in your Windows language 
 ### Saved fixes
 
 When you correct a wrong auto-detected game, the app remembers that window title. The **Saved fixes** card (it appears once you have one) lists them. Click **×** to forget a fix and let auto-detect guess again.
-
-### Pause
-
-Click **Pause** at the top of the app (or **Pause presence** in the tray menu) to hide your game from Discord without losing it. Auto-detect keeps tracking, and your status text stays saved. Click **Resume** and your current game shows again.
-
-Pause is for the current session only. If you quit and reopen the app, it starts un-paused.
 
 ### Notifications
 
@@ -211,10 +262,12 @@ The app uses a single column in a small window and switches to two columns when 
 | "Could not reach Discord" | Open the **Discord desktop app** and make sure you're logged in, then try **Set game** again. |
 | My game shows on Discord but not for me | Look at your profile from another account, or ask a friend. Your own buttons are hidden from you. |
 | The buttons don't show | Check that the link starts with `https://`. If an orange warning appears in the app, Discord rejected the buttons for that game. |
-| The game I want isn't in the search | Discord doesn't list it, so it can't be shown with this app. |
+| The game I want isn't in the search | Discord doesn't list it, so it can't be shown with this app. Add it under **Custom games**. |
 | "GeForce NOW" still shows next to my game | Turn off Discord integration in the GeForce NOW settings if it has that option, or hide it in Discord under **Settings → Activity Privacy**. |
 | Auto-detect shows nothing | The GeForce NOW window title doesn't include the game name. Pick the game manually. |
 | My game stays up after I quit it | Check the **GeForce NOW:** line at the top of the app. If it says "open, no game running" while you're in a game, the app can't tell when you leave. Click **Copy debug info** and report it. You can always press **Clear**. |
+| The app is slow or laggy | Turn on **Low PC mode** in the **Look** card, and turn off **Reduce motion** only if you want it on. |
+| Discord connection lost | The app reconnects by itself every 15 seconds. Make sure the Discord desktop app is open and logged in. |
 | I don't get game-change notifications | Make sure **Notify on game change** is on, then check Windows **Settings → System → Notifications** and turn off Focus assist / Do not disturb. |
 | "Couldn't check for updates" | You may be offline, or no release exists yet. Try again later. |
 | Windows or antivirus flags the installer | The installer is unsigned. See the SmartScreen steps above. |
@@ -225,7 +278,7 @@ The app uses a single column in a small window and switches to two columns when 
 
 ## Feedback and bugs
 
-Open an issue on this repository and include what you were doing and what you saw.
+Open an issue on this repository and include what you were doing and what you saw. For crashes, attach a **Save report** file from the **App** card.
 
 ## Disclaimer
 
